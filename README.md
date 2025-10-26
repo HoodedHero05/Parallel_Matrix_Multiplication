@@ -1,6 +1,7 @@
 # Parallel_Matrix_Multiplication
+
 To download code:
-  Open terminal
+  Open a terminal and run the following script:
   run "https://github.com/HoodedHero05/Parallel_Matrix_Multiplication"
     That’ll create a folder like: /Users/yourname/Desktop/Matrix_microservices/
 
