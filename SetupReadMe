@@ -28,3 +28,6 @@ To set up the code:
           .\venv\Scripts\activate
           pip install -r requirements.txt
           docker-compose up -d
+  To compute the matrices, run the following script in the terminal
+    py menu_metrices.py
+    # There, you can input the size of the matrix you want to calculate and wait for it to finish.
