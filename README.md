@@ -1,32 +1,29 @@
 # Parallel_Matrix_Multiplication
+To download code:
+  Open terminal
+  run "https://github.com/HoodedHero05/Parallel_Matrix_Multiplication"
+    That’ll create a folder like: /Users/yourname/Desktop/Matrix_microservices/
 
-Overview
-
-This project implements a parallelized divide-and-conquer matrix multiplication system using a microservice-based architecture. Large matrices are divided into smaller submatrices, multiplied in parallel across multiple Docker containers, and then aggregated to produce the final matrix.
-
-The system consists of four microservices:
-
-Uploader Service: Accepts matrix input from the user or generates matrices of a specified size.
-
-Divider Service: Splits matrices into smaller submatrices.
-
-Multiplication Services: Compute the product of assigned submatrix pairs in parallel.
-
-Aggregator Service: Combines partial results into the final matrix.
-
-All services communicate via REST APIs over a shared Docker network and run in Docker containers to ensure consistent, isolated environments.
-
-#Setup
-1. Clone the repository
-
-  git clone <repository_url>
-  cd <repository_folder>
-
-
-2. Run the setup script (cross-platform)
-
-  python setup.py
-
-3. Start the system
-
-  docker-compose up --build
+To set up the code:
+  For Linux/MacOS
+    1. Open the terminal and run the setup script
+        run setup.sh
+  For Windows
+    1. Open the terminal
+    2. Run the following scripts 
+        # Check Python
+          python --version
+          pip --version
+        # Check Docker
+          docker --version
+        # Check Docker Compose
+          docker-compose --version
+        # If any missing, download and install manually from:
+        # Python: https://www.python.org/downloads/
+        # Docker: https://docs.docker.com/get-docker/
+        # Docker Compose: https://docs.docker.com/compose/install/
+        # Once installed, run:
+          python -m venv venv
+          .\venv\Scripts\activate
+          pip install -r requirements.txt
+          docker-compose up -d
