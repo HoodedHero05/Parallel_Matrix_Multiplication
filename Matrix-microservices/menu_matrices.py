@@ -18,7 +18,7 @@ def main():
     print("Matrix B:\n", B)
 
     # Choose a tile size (for small n, tile=1)
-    tile_r, tile_c = 1, 1
+    tile_r, tile_c = 100, 100
     payload = {"A": A.tolist(), "B": B.tolist(), "tile_r": tile_r, "tile_c": tile_c}
 
     print("Submitting matrices to uploader...")
@@ -59,4 +59,5 @@ def main():
         time.sleep(0.1)
 
 if __name__ == "__main__":
+
     main()
