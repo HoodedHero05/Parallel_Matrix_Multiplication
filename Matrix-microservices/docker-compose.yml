@@ -1,0 +1,26 @@
+services:
+  uploader:
+    build: ./uploader
+    ports: ["5000:5000"]
+    depends_on: [splitter]
+
+  splitter:
+    build: ./splitter
+    ports: ["5001:5001"]
+    depends_on: [worker1, worker2, worker3, aggregator]
+
+  aggregator:
+    build: ./aggregator
+    ports: ["5003:5003"]
+
+  worker1:
+    build: ./worker
+    container_name: worker1
+
+  worker2:
+    build: ./worker
+    container_name: worker2
+
+  worker3:
+    build: ./worker
+    container_name: worker3
